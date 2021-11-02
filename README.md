@@ -1,20 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# React-Redux setup
+# Bookstore
 
-This is a simple yet powerful React-Redux boilerplate for later use as a starting point in other projects. It derives from `create-react-app` with a few modifications, which include installing StyleLint, ESLint, and Bootstrap, removing unimportant files, and adding some content to the remaining files. It features a functional Counter component that implements Redux for state management, using `useSelector` and `useDispatch` hooks.
+Bookstore is a simple online book store. It's built with React, Redux and Bootstrap. It allows you to:
 
-## Mobile
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
 
 ![screenshot](./app_screenshot.png)
-
-## Desktop
-
-![screenshot](./app_screenshot-2.png)
-
-## Live Demo
-
-[Live Demo Link](https://dicodiaz.me/react-redux-setup/)
 
 ## Built With
 
@@ -26,18 +20,13 @@ This is a simple yet powerful React-Redux boilerplate for later use as a startin
 
 ## Getting Started
 
-To get React and Redux up and running in another project, follow these simple steps:
+To get this project up and running, follow these simple steps:
 
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
 3. Copy and paste all files and folders except app_screenshot.png, app_screenshot-2.png, MIT.md, and README.md into the other project's root folder.
 4. Run `npm install`
 5. Run `npm start`
-
-### Considerations
-
-- Intended only for use as a starting point in other projects. Do not copy and paste these files into more mature projects as this will overwrite your package.json and package-lock.json files.
-- This project also includes Bootstrap for styling.
 
 ### Setup
 
