@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Books from './components/Books';
+import BookList from './components/BookList';
 import Categories from './components/Categories';
+import Form from './components/Form';
 import Header from './components/Header';
 import NoMatch from './components/NoMatch';
 
@@ -15,7 +16,9 @@ const App = () => (
           <div>
             <Switch>
               <Route exact path="/">
-                <Books />
+                <BookList />
+                <div className="h-line my-4" />
+                <Form />
               </Route>
               <Route path="/categories">
                 <Categories />
