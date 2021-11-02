@@ -1,25 +1,27 @@
-const INCREMENT = 'react-redux-setup/counter/increment';
-const DECREMENT = 'react-redux-setup/counter/decrement';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = {
-  count: 0,
+  books: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
-      return { ...state, count: state.count + 1 };
-    case DECREMENT:
-      return { ...state, count: state.count - 1 };
+    case ADD_BOOK:
+      return { ...state, books: [...state.books, action.payload] };
+    case REMOVE_BOOK:
+      return { ...state, books: state.books.filter((book) => book.id !== action.payload) };
     default:
       return state;
   }
 };
 
-export const increment = () => ({
-  type: INCREMENT,
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
 });
 
-export const decrement = () => ({
-  type: DECREMENT,
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
 });
