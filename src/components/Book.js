@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookAsync } from '../redux/books/books';
 
-const Book = ({ id, title, author }) => {
+const Book = ({ id, title, author, category }) => {
   const dispatch = useDispatch();
 
-  const handleRemove = () => dispatch(removeBook(id));
+  const handleRemove = () => dispatch(removeBookAsync(id));
 
   return (
     <div className="card">
       <div className="row row-cols-auto mx-0 py-4 justify-content-around">
         <div>
-          <p>Action</p>
+          <p>{category}</p>
           <p>{title}</p>
           <p>{author}</p>
           <div className="row row-cols-auto mx-0 g-0">
@@ -48,6 +48,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;

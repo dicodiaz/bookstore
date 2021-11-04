@@ -1,12 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import useInputHook from '../hooks/inputHook';
-import { addBook } from '../redux/books/books';
+import { addBookAsync } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
   const { value: titleValue, reset: titleReset, onChange: titleOnChange } = useInputHook('');
   const { value: authorValue, reset: authorReset, onChange: authorOnChange } = useInputHook('');
+  const { value: categoryValue, onChange: categoryOnChange } = useInputHook('Action');
 
   const submitBookToStore = (event) => {
     event.preventDefault();
@@ -14,8 +15,9 @@ const Form = () => {
       id: uuidv4(),
       title: titleValue,
       author: authorValue,
+      category: categoryValue,
     };
-    dispatch(addBook(newBook));
+    dispatch(addBookAsync(newBook));
     titleReset();
     authorReset();
   };
@@ -45,8 +47,13 @@ const Form = () => {
           />
         </div>
         <div className="col-3">
-          <select className="col-3 form-select" defaultValue="Category">
-            <option>Category</option>
+          <select className="col-3 form-select" value={categoryValue} onChange={categoryOnChange}>
+            <option>Action</option>
+            <option>Classics</option>
+            <option>Graphic Novel</option>
+            <option>Fantasy</option>
+            <option>Fiction</option>
+            <option>Horror</option>
           </select>
         </div>
         <button type="submit" className="col-2" onClick={submitBookToStore}>
