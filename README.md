@@ -18,6 +18,10 @@ Bookstore is a simple online book store. It's built with React, Redux and Bootst
 - VSCode
 - Git & GitHub
 
+## Live Demo
+
+[Live Demo Link](https://dicodiaz-bookstore.herokuapp.com)
+
 ## Getting Started
 
 To get this project up and running, follow these simple steps:
