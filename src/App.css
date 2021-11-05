@@ -6,7 +6,7 @@ body {
 }
 
 .font-robotoslab {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab', sans-serif !important;
 }
 
 .text-custom1 {
@@ -14,6 +14,10 @@ body {
 }
 
 .text-custom2 {
+  color: #121212;
+}
+
+.text-header {
   opacity: 0.5;
   font-size: 0.813rem;
   letter-spacing: 1.9px;
@@ -26,18 +30,13 @@ body {
   opacity: 1;
 }
 
-.Oval-2 {
-  width: 4.25rem;
-  height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
-  border-image-slice: 1;
-}
-
 .v-line {
   width: 1px;
-  background-color: gray;
+  background-color: #e8e8e8;
+}
+
+.v-line2 {
+  border-right: 1px solid #e8e8e8;
 }
 
 .h-line {
