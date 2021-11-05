@@ -8,7 +8,13 @@ Bookstore is a simple online book store. It's built with React, Redux and Bootst
 - Add a book.
 - Remove a selected book.
 
+## Mobile
+
 ![screenshot](./app_screenshot.png)
+
+## Desktop
+
+![screenshot](./app_screenshot-2.png)
 
 ## Built With
 

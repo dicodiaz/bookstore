@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <header>
-    <nav className="navbar navbar-expand-md bg-white fixed-top py-3 px-5">
+    <nav className="navbar navbar-expand-md bg-white fixed-top py-md-3 px-md-5">
       <div className="container-fluid">
-        <span className="navbar-brand text-custom1 fw-bold fs-3 pe-3">Bookstore CMS</span>
+        <span className="navbar-brand text-custom1 fw-bold fs-3 pe-md-3">Bookstore CMS</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -15,7 +15,7 @@ const Header = () => (
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <AiOutlineMenu style={{ color: 'white', fontSize: '25px' }} />
+          <AiOutlineMenu style={{ fontSize: '25px' }} />
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
