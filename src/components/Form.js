@@ -23,10 +23,10 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
-      <form className="row mx-0 g-0 justify-content-between">
-        <div className="col-3">
+    <div className="pb-5 pb-md-0">
+      <h2 className="h4 fw-bold text-muted">ADD NEW BOOK</h2>
+      <form className="row mx-0 g-0 justify-content-between pb-5 pb-md-0">
+        <div className="col-md-3">
           <input
             type="text"
             className="form-control"
@@ -36,7 +36,7 @@ const Form = () => {
             required
           />
         </div>
-        <div className="col-3">
+        <div className="col-md-3">
           <input
             type="text"
             className="form-control"
@@ -46,19 +46,26 @@ const Form = () => {
             required
           />
         </div>
-        <div className="col-3">
-          <select className="col-3 form-select" value={categoryValue} onChange={categoryOnChange}>
+        <div className="col-md-3">
+          <select
+            className="col-3 form-select try"
+            value={categoryValue}
+            onChange={categoryOnChange}
+          >
             <option>Action</option>
             <option>Classics</option>
             <option>Graphic Novel</option>
             <option>Fantasy</option>
-            <option>Fiction</option>
+            <option>Science Fiction</option>
             <option>Horror</option>
+            <option>Economy</option>
           </select>
         </div>
-        <button type="submit" className="col-2" onClick={submitBookToStore}>
-          ADD BOOK
-        </button>
+        <div className="col-md-2 pb-5 pb-md-0">
+          <button type="submit" className="btn btn-primary w-100" onClick={submitBookToStore}>
+            <span className="font-robotoslab small px-3">ADD BOOK</span>
+          </button>
+        </div>
       </form>
     </div>
   );

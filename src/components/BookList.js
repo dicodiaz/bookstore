@@ -13,11 +13,22 @@ const BookList = () => {
 
   return (
     <ul className="list-unstyled row mx-0 g-0 gy-3">
-      {books.map((book) => (
-        <li key={book.id}>
-          <Book id={book.id} title={book.title} author={book.author} category={book.category} />
-        </li>
-      ))}
+      {books.map((book) => {
+        const actualChapter = Math.floor(Math.random() * 11);
+        const totalChapters = Math.floor(Math.random() * 11 + actualChapter);
+        return (
+          <li key={book.id}>
+            <Book
+              id={book.id}
+              title={book.title}
+              author={book.author}
+              category={book.category}
+              actualChapter={actualChapter}
+              totalChapters={totalChapters}
+            />
+          </li>
+        );
+      })}
     </ul>
   );
 };

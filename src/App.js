@@ -11,7 +11,7 @@ const App = () => (
   <>
     <Header />
     <main className="bg-light min-vh-100 d-flex py-5">
-      <div className="container-lg pt-5">
+      <div className="container-lg pt-3 pt-md-5">
         <div className="row mx-0 justify-content-center pt-3">
           <div>
             <Switch>
