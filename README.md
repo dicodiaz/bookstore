@@ -2,7 +2,7 @@
 
 # Bookstore
 
-Bookstore is a simple online book store. It's built with React, Redux and Bootstrap. It allows you to:
+"Bookstore" is a mock online bookstore that features thunks to consume a [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739). Built with React, Redux, and Bootstrap. It allows you to:
 
 - Display a list of books.
 - Add a book.
@@ -48,7 +48,7 @@ Follow the steps described before.
 
 - GitHub: [@dicodiaz](https://github.com/dicodiaz)
 - Twitter: [@DicoDiaz1](https://twitter.com/DicoDiaz1)
-- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan-476106a6/)
+- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan)
 
 ## 🤝 Contributing
 
