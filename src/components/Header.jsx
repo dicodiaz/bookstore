@@ -20,12 +20,12 @@ const Header = () => (
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="text-header" activeClassName="active-link" exact>
+              <NavLink to="/" className="text-header">
                 BOOKS
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/categories" className="text-header" activeClassName="active-link" exact>
+              <NavLink to="/categories" className="text-header">
                 CATEGORIES
               </NavLink>
             </li>

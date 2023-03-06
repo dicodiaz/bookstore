@@ -1,4 +1,4 @@
-import BookstoreAPI from '../../services/BookstoreAPI';
+import { addBooktoAPI, deleteBookFromAPI, getAllBooksFromAPI } from '../../services/queries';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
@@ -26,8 +26,18 @@ export const setAllBooks = (payload) => ({
   payload,
 });
 
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
+});
+
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
+});
+
 export const setAllBooksFromAPI = () => (dispatch) => {
-  BookstoreAPI.getAllBooksFromAPI().then((data) => {
+  getAllBooksFromAPI().then((data) => {
     const books = [];
     Object.entries(data).forEach(([id, info]) => {
       const { title: APItitle, category } = info[0];
@@ -44,11 +54,6 @@ export const setAllBooksFromAPI = () => (dispatch) => {
   });
 };
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
-
 export const addBookAsync = (book) => (dispatch) => {
   const { id, title, author, category } = book;
   const APIbook = {
@@ -56,14 +61,9 @@ export const addBookAsync = (book) => (dispatch) => {
     category,
     title: `${title} - ${author}`,
   };
-  BookstoreAPI.addBooktoAPI(APIbook).then(() => dispatch(addBook(book)));
+  addBooktoAPI(APIbook).then(() => dispatch(addBook(book)));
 };
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
-
 export const removeBookAsync = (id) => (dispatch) => {
-  BookstoreAPI.deleteBookFromAPI(id).then(() => dispatch(removeBook(id)));
+  deleteBookFromAPI(id).then(() => dispatch(removeBook(id)));
 };

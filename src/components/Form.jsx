@@ -1,15 +1,15 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import useInputHook from '../hooks/inputHook';
+import useInput from '../hooks/useInput';
 import { addBookAsync } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
-  const { value: titleValue, reset: titleReset, onChange: titleOnChange } = useInputHook('');
-  const { value: authorValue, reset: authorReset, onChange: authorOnChange } = useInputHook('');
-  const { value: categoryValue, onChange: categoryOnChange } = useInputHook('Action');
+  const { value: titleValue, clear: clearTitle, onChange: onTitleChange } = useInput('');
+  const { value: authorValue, clear: clearAuthor, onChange: onAuthorChange } = useInput('');
+  const { value: categoryValue, onChange: onCategoryChange } = useInput('Action');
 
-  const submitBookToStore = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const newBook = {
       id: uuidv4(),
@@ -18,8 +18,8 @@ const Form = () => {
       category: categoryValue,
     };
     dispatch(addBookAsync(newBook));
-    titleReset();
-    authorReset();
+    clearTitle();
+    clearAuthor();
   };
 
   return (
@@ -32,7 +32,7 @@ const Form = () => {
             className="form-control"
             placeholder="Book title"
             value={titleValue}
-            onChange={titleOnChange}
+            onChange={onTitleChange}
             required
           />
         </div>
@@ -42,7 +42,7 @@ const Form = () => {
             className="form-control"
             placeholder="Book author"
             value={authorValue}
-            onChange={authorOnChange}
+            onChange={onAuthorChange}
             required
           />
         </div>
@@ -50,7 +50,7 @@ const Form = () => {
           <select
             className="col-3 form-select try"
             value={categoryValue}
-            onChange={categoryOnChange}
+            onChange={onCategoryChange}
           >
             <option>Action</option>
             <option>Classics</option>
@@ -62,7 +62,7 @@ const Form = () => {
           </select>
         </div>
         <div className="col-md-2 pb-5 pb-md-0">
-          <button type="submit" className="btn btn-primary w-100" onClick={submitBookToStore}>
+          <button type="submit" className="btn btn-primary w-100" onClick={handleSubmit}>
             <span className="font-robotoslab small px-3">ADD BOOK</span>
           </button>
         </div>

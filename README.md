@@ -26,7 +26,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://dicodiaz.me/bookstore/)
+[Live Demo Link](https://bookstore.dicodiaz.com.co)
 
 ## Getting Started
 
@@ -35,8 +35,8 @@ To get this project up and running, follow these simple steps:
 1. Clone the repository into your machine (Or download the .zip file and extract).
 2. Open the project's folder.
 3. Copy and paste all files and folders except app_screenshot.png, app_screenshot-2.png, MIT.md, and README.md into the other project's root folder.
-4. Run `npm install`
-5. Run `npm start`
+4. Run `pnpm install`
+5. Run `pnpm dev`
 
 ### Setup
 
@@ -47,8 +47,8 @@ Follow the steps described before.
 👤 **Dico Diaz Dussan**
 
 - GitHub: [@dicodiaz](https://github.com/dicodiaz)
-- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan/)
-- Portfolio: [dicodiaz.com.co](https://dicodiaz.com.co)
+- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan)
+- Portfolio: [portfolio.dicodiaz.com.co](https://portfolio.dicodiaz.com.co)
 
 ## 🤝 Contributing
 
